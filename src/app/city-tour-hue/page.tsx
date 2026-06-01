@@ -1,13 +1,14 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { BookingForm } from "@/components/BookingForm"
-import { absUrl } from "@/lib/urls"
 
 export const metadata: Metadata = {
-  title: "City tour Huế - Lịch trình linh hoạt, xe + tài xế",
-  description:
-    "City tour Huế trong ngày: Đại Nội, chùa Thiên Mụ, lăng tẩm, làng hương... Xe sạch, tài xế nhiệt tình, đón trả tận nơi.",
-  alternates: { canonical: absUrl("/city-tour-hue") },
+  title: "Thuê Xe City Tour Huế Trọn Gói Giá Rẻ - Khám Phá Cố Đô",
+  description: "Dịch vụ thuê xe City Tour Huế nửa ngày & 1 ngày. Tham quan Đại Nội, Lăng Tẩm, Chùa Thiên Mụ. Tài xế bản địa thân thiện, xe 4-16 chỗ đời mới.",
+  openGraph: {
+    title: "Thuê Xe City Tour Huế Trọn Gói Giá Rẻ - Khám Phá Cố Đô",
+    description: "Dịch vụ thuê xe City Tour Huế nửa ngày & 1 ngày. Tham quan Đại Nội, Lăng Tẩm, Chùa Thiên Mụ. Tài xế bản địa thân thiện, xe 4-16 chỗ đời mới.",
+  }
 }
 
 export default function CityTourHuePage() {

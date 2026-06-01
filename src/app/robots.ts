@@ -1,16 +1,13 @@
-import type { MetadataRoute } from "next"
-import { absUrl } from "@/lib/urls"
-import { site } from "@/lib/site"
+import { MetadataRoute } from 'next'
+import { absUrl } from '@/lib/urls'
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: [
-      {
-        userAgent: "*",
-        allow: "/",
-      },
-    ],
-    sitemap: absUrl("/sitemap.xml"),
-    host: site.siteUrl,
+    rules: {
+      userAgent: '*',
+      allow: '/',
+      disallow: '/api/',
+    },
+    sitemap: absUrl('/sitemap.xml'),
   }
 }

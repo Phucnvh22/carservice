@@ -5,10 +5,14 @@ import { site } from "@/lib/site"
 import { absUrl } from "@/lib/urls"
 
 export const metadata: Metadata = {
-  title: "Đưa đón sân bay Phú Bài  - Đặt xe nhanh, đón đúng giờ",
+  title: "Đưa Đón Sân Bay Phú Bài (Huế) Giá Rẻ - Gọi Có Xe Ngay",
   description:
-    "Dịch vụ Đưa đón sân bay Phú Bài : đón đúng giờ, theo dõi chuyến bay, xe sạch an toàn. Báo giá rõ ràng, hỗ trợ 24/7.",
+    "Dịch vụ xe đưa đón sân bay Phú Bài (Huế) 4-7-16 chỗ. Cam kết giá rẻ, xe đời mới, tài xế chuyên nghiệp, đón đúng giờ. Đặt xe ngay!",
   alternates: { canonical: absUrl("/san-bay-hue") },
+  openGraph: {
+    title: "Đưa Đón Sân Bay Phú Bài (Huế) Giá Rẻ - Gọi Có Xe Ngay",
+    description: "Dịch vụ xe đưa đón sân bay Phú Bài (Huế) 4-7-16 chỗ. Cam kết giá rẻ, xe đời mới, tài xế chuyên nghiệp, đón đúng giờ.",
+  }
 }
 
 export default function AirportHuePage() {

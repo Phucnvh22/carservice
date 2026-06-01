@@ -125,10 +125,13 @@ const CarCard = ({ car }: { car: CarModel }) => {
 }
 
 export const metadata: Metadata = {
-  title: "Thuê xe tự lái Huế - Nhận xe nhanh, thủ tục gọn",
-  description:
-    "Thuê xe tự lái tại Huế theo ngày/tuần: xe sạch đẹp, nhận xe nhanh. Hỗ trợ tư vấn dòng xe phù hợp lịch trình và số người.",
+  title: "Thuê Xe Tự Lái Huế Giá Rẻ, Thủ Tục Nhanh Gọn - Không Giữ Cọc",
+  description: "Dịch vụ cho thuê xe tự lái tại Huế 4 chỗ, 7 chỗ. Giao xe tận nơi, thủ tục đơn giản chỉ cần CCCD, không cần hộ khẩu. Thuê ngay!",
   alternates: { canonical: absUrl("/thue-xe-tu-lai-hue") },
+  openGraph: {
+    title: "Thuê Xe Tự Lái Huế Giá Rẻ, Thủ Tục Nhanh Gọn - Không Giữ Cọc",
+    description: "Dịch vụ cho thuê xe tự lái tại Huế 4 chỗ, 7 chỗ. Giao xe tận nơi, thủ tục đơn giản chỉ cần CCCD, không cần hộ khẩu. Thuê ngay!",
+  }
 }
 
 export default function SelfDriveHuePage() {
