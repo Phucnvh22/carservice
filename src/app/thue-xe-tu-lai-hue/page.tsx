@@ -18,7 +18,7 @@ const cars: CarModel[] = [
   { name: "Hyundai Elantra", price: "Từ 800k/ngày", meta: "5 chỗ • Cân bằng tiện nghi", tone: "brand", imageSrc: "https://hyundai-mientrung.com/wp-content/uploads/2023/11/huyndai-elantra-2022_003.png" },
   { name: "Vinfast VF9", price: "Từ 1tr8/ngày", meta: "7 chỗ • Gầm cao • Thoải mái", tone: "brand", imageSrc: "https://vinfastcamau.vn/data/product/VF9/vf9-trang.png" },
   { name: "Kia Sorento", price: "Từ 1tr3/ngày", meta: "7 chỗ • Rộng rãi cho gia đình", tone: "slate", imageSrc: "https://kiabinhtrieu3s.com/wp-content/uploads/2022/06/kia-sorento-mau-trang-glacial-white-pearl.png" },
-  { name: "Kia Canival", price: "Từ 1tr8/ngày", meta: "7 chỗ • Đi đường dài ổn định", tone: "slate", imageSrc: "https://www.kianhatrang.com/storage/pagedata/101177/img/upload/hinhanh/Carnival/mausac/2.jpeg" },
+  { name: "Kia Canival", price: "Từ 1tr8/ngày", meta: "7 chỗ • Đi đường dài ổn định", tone: "slate", imageSrc: "https://kia.giaxeoto24h.vn/wp-content/uploads/2023/10/kia-carnival-mau-xe-trang-ngoc-trai.png" }
 ]
 
 const CarArt = ({ tone, title }: { tone: CarModel["tone"]; title: string }) => {

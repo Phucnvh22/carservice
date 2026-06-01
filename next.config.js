@@ -39,6 +39,16 @@ const nextConfig = {
         hostname: "katavina.com",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "kiacantho.com.vn",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "kia.giaxeoto24h.vn",
+        pathname: "/**",
+      },
     ],
   },
 }
