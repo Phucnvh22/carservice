@@ -1,13 +1,24 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { BookingForm } from "@/components/BookingForm"
+import { absUrl } from "@/lib/urls"
 
 export const metadata: Metadata = {
   title: "Thuê Xe City Tour Huế Trọn Gói Giá Rẻ - Khám Phá Cố Đô",
   description: "Dịch vụ thuê xe City Tour Huế nửa ngày & 1 ngày. Tham quan Đại Nội, Lăng Tẩm, Chùa Thiên Mụ. Tài xế bản địa thân thiện, xe 4-16 chỗ đời mới.",
+  alternates: { canonical: absUrl("/city-tour-hue") },
   openGraph: {
     title: "Thuê Xe City Tour Huế Trọn Gói Giá Rẻ - Khám Phá Cố Đô",
     description: "Dịch vụ thuê xe City Tour Huế nửa ngày & 1 ngày. Tham quan Đại Nội, Lăng Tẩm, Chùa Thiên Mụ. Tài xế bản địa thân thiện, xe 4-16 chỗ đời mới.",
+    url: absUrl("/city-tour-hue"),
+    images: [
+      {
+        url: "https://queenbus.com.vn/wp-content/uploads/2025/07/Dai-Noi-Hue-khi-hoang-hon-buong-xuong-1.jpg",
+        width: 1200,
+        height: 630,
+        alt: "City tour Huế",
+      },
+    ],
   }
 }
 

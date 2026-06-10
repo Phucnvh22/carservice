@@ -12,8 +12,6 @@ const serviceNav = [
 
 const nav = [
   { href: "/bang-gia", label: "Bảng giá" },
-  { href: "/diem-den", label: "Điểm đến" },
-  { href: "/danh-gia", label: "Đánh giá" },
   { href: "/lien-he", label: "Liên hệ" },
 ]
 

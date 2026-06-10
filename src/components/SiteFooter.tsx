@@ -4,8 +4,6 @@ import { site } from "@/lib/site"
 const links = [
   { href: "/dich-vu", label: "Dịch vụ" },
   { href: "/bang-gia", label: "Bảng giá" },
-  { href: "/diem-den", label: "Điểm đến" },
-  { href: "/danh-gia", label: "Đánh giá" },
   { href: "/san-bay-hue", label: "Đưa đón sân bay" },
   { href: "/city-tour-hue", label: "City tour Huế" },
   { href: "/thue-xe-tu-lai-hue", label: "Thuê xe tự lái" },

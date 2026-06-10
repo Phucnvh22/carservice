@@ -131,6 +131,15 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Thuê Xe Tự Lái Huế Giá Rẻ, Thủ Tục Nhanh Gọn - Không Giữ Cọc",
     description: "Dịch vụ cho thuê xe tự lái tại Huế 4 chỗ, 7 chỗ. Giao xe tận nơi, thủ tục đơn giản chỉ cần CCCD, không cần hộ khẩu. Thuê ngay!",
+    url: absUrl("/thue-xe-tu-lai-hue"),
+    images: [
+      {
+        url: absUrl("/images/1.png"),
+        width: 1200,
+        height: 630,
+        alt: "Thuê xe tự lái Huế",
+      },
+    ],
   }
 }
 

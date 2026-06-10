@@ -32,6 +32,14 @@ export const metadata: Metadata = {
     title: "Đặt xe Huế - Sân bay Phú Bài, City tour, Thuê xe tự lái",
     description:
       "Đặt xe Huế uy tín: đưa đón sân bay Phú Bài, city tour Huế, thuê xe tự lái. Giá minh bạch, hỗ trợ 24/7.",
+    images: [
+      {
+        url: absUrl("/images/1.png"),
+        width: 1200,
+        height: 630,
+        alt: "Hue Car Service",
+      },
+    ],
   },
   robots: {
     index: true,
@@ -56,9 +64,8 @@ const JsonLd = () => {
     areaServed: ["Huế", "Sân bay Phú Bài", "Đà Nẵng", "Hội An", "Lăng Cô"],
     serviceType: [
       "Đưa đón sân bay",
-      "City tour",
+      "City tour Huế",
       "Thuê xe tự lái",
-      "Thuê xe có tài xế",
     ],
   }
   return (

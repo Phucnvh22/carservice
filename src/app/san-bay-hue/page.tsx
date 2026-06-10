@@ -12,6 +12,15 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Đưa Đón Sân Bay Phú Bài (Huế) Giá Rẻ - Gọi Có Xe Ngay",
     description: "Dịch vụ xe đưa đón sân bay Phú Bài (Huế) 4-7-16 chỗ. Cam kết giá rẻ, xe đời mới, tài xế chuyên nghiệp, đón đúng giờ.",
+    url: absUrl("/san-bay-hue"),
+    images: [
+      {
+        url: absUrl("/images/sanbay.jpg"),
+        width: 1200,
+        height: 630,
+        alt: "Xe đưa đón sân bay Phú Bài",
+      },
+    ],
   }
 }
 

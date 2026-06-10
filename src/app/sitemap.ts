@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/san-bay-hue',
     '/city-tour-hue',
     '/thue-xe-tu-lai-hue',
+    '/lien-he',
   ]
 
   return routes.map((route) => ({
