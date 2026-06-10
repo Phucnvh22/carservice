@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  web:
+    image: ghcr.io/${GITHUB_REPOSITORY_OWNER}/hue-car-service:latest
+    container_name: hue_car_service
+    restart: always
+    ports:
+      - "3001:3001"
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - TELEGRAM_CHAT_ID=${TELEGRAM_CHAT_ID}
+    networks:
+      - webnet
+
+networks:
+  webnet:
+    driver: bridge

@@ -1,0 +1,85 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main # Chạy action này khi code được đẩy lên nhánh main
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  build-and-push-image:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+  deploy-to-vps:
+    needs: build-and-push-image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to VPS via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          script: |
+            # Login to GitHub Container Registry
+            echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+            
+            # Create a directory for the app if it doesn't exist
+            mkdir -p ~/hue-car-service
+            cd ~/hue-car-service
+            
+            # Create/Update docker-compose.yml on the VPS
+            cat << 'EOF' > docker-compose.yml
+            version: '3.8'
+            services:
+              web:
+                image: ghcr.io/${{ github.repository }}:main
+                container_name: hue_car_service
+                restart: always
+                ports:
+                  - "3001:3001"
+                environment:
+                  - TELEGRAM_BOT_TOKEN=${{ secrets.TELEGRAM_BOT_TOKEN }}
+                  - TELEGRAM_CHAT_ID=${{ secrets.TELEGRAM_CHAT_ID }}
+            EOF
+            
+            # Pull the latest image
+            docker pull ghcr.io/${{ github.repository }}:main
+            
+            # Restart the container
+            docker compose down
+            docker compose up -d
+            
+            # Clean up old images
+            docker image prune -af

@@ -49,6 +49,16 @@ const nextConfig = {
         hostname: "kia.giaxeoto24h.vn",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "chothuexetulai24h.com.vn",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "kiavietnam.com.vn",
+        pathname: "/**",
+      },
     ],
   },
 }
