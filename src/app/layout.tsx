@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next"
+import Script from "next/script"
 import "./globals.css"
 import { Inter } from "next/font/google"
 import { SiteHeader } from "@/components/SiteHeader"
@@ -52,6 +53,9 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GSC_VERIFICATION,
+  },
 }
 
 const JsonLd = () => {
@@ -84,6 +88,22 @@ export default function RootLayout({
   return (
     <html lang="vi" className={`${inter.className} scroll-smooth`}>
       <body className="min-h-dvh bg-porsche-white text-porsche-black antialiased selection:bg-porsche-red selection:text-white flex flex-col">
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
+              `}
+            </Script>
+          </>
+        )}
         <JsonLd />
         <SiteHeader />
         <main className="flex-1 pb-24 md:pb-0">{children}</main>
