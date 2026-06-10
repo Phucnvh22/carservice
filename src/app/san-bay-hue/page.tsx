@@ -40,7 +40,7 @@ export default function AirportHuePage() {
           <div className="relative aspect-[16/9] w-full overflow-hidden rounded-3xl border border-slate-200">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img 
-              src="https://hue.gov.vn/Portals/0/Uploads/TinBai/00.00.H57/Nam2025/Thang3/473639239_924435286462834_6834800774871853837_n_13_3_2025_14_40_05_981_CH.jpg" 
+              src="/images/sanbay.jpg" 
               alt="Xe đưa đón sân bay Phú Bài" 
               className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
             />

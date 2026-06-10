@@ -13,12 +13,12 @@ type CarModel = {
 }
 
 const cars: CarModel[] = [
-  { name: "Vinfast VF6", price: "Từ 900k/ngày", meta: "5 chỗ • Sạc điện miễn phí", tone: "accent", imageSrc: "https://vinfast-cars.vn/wp-content/uploads/2024/10/vinfast-vf6-trang.png" },
-  { name: "Vinfast VF5", price: "Từ 750k/ngày", meta: "5 chỗ • Sạc điện miễn phí", tone: "brand", imageSrc: "https://katavina.com/uploaded/tin-tuc/gia-xe-vf5/gia-xe-vf5.jpg" },
-  { name: "Hyundai Elantra", price: "Từ 800k/ngày", meta: "5 chỗ • Cân bằng tiện nghi", tone: "brand", imageSrc: "https://hyundai-mientrung.com/wp-content/uploads/2023/11/huyndai-elantra-2022_003.png" },
-  { name: "Vinfast VF9", price: "Từ 1tr8/ngày", meta: "7 chỗ • Gầm cao • Thoải mái", tone: "brand", imageSrc: "https://vinfastcamau.vn/data/product/VF9/vf9-trang.png" },
-  { name: "Kia Sorento", price: "Từ 1tr3/ngày", meta: "7 chỗ • Rộng rãi cho gia đình", tone: "slate", imageSrc: "https://kiavietnam.com.vn/storage/lsorento-hev-black.png" },
-  { name: "Kia Canival", price: "Từ 1tr8/ngày", meta: "7 chỗ • Đi đường dài ổn định", tone: "slate", imageSrc: "https://kia.giaxeoto24h.vn/wp-content/uploads/2023/10/kia-carnival-mau-xe-trang-ngoc-trai.png" }
+  { name: "Vinfast VF6", price: "Từ 900k/ngày", meta: "5 chỗ • Sạc điện miễn phí", tone: "accent", imageSrc: "/images/vinfast-vf6-trang.png" },
+  { name: "Vinfast VF5", price: "Từ 750k/ngày", meta: "5 chỗ • Sạc điện miễn phí", tone: "brand", imageSrc: "/images/gia-xe-vf5.jpg" },
+  { name: "Hyundai Elantra", price: "Từ 800k/ngày", meta: "5 chỗ • Cân bằng tiện nghi", tone: "brand", imageSrc: "/images/huyndai-elantra-2022_0002_elantra-2022.png" },
+  { name: "Vinfast VF9", price: "Từ 1tr8/ngày", meta: "7 chỗ • Gầm cao • Thoải mái", tone: "brand", imageSrc: "/images/Vf9.png" },
+  { name: "Kia Sorento", price: "Từ 1tr3/ngày", meta: "7 chỗ • Rộng rãi cho gia đình", tone: "slate", imageSrc: "/images/sorento.jpg" },
+  { name: "Kia Canival", price: "Từ 1tr8/ngày", meta: "7 chỗ • Đi đường dài ổn định", tone: "slate", imageSrc: "/images/carnival.png" }
 ]
 
 const CarArt = ({ tone, title }: { tone: CarModel["tone"]; title: string }) => {
