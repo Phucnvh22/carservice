@@ -6,6 +6,19 @@ import { faqs, quickNav } from "@/lib/content"
 export default function HomePage() {
   return (
     <>
+      <section className="relative w-full border-b border-porsche-grey-20">
+        <video 
+          className="w-full h-auto max-h-[80vh] object-cover"
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+        >
+          <source src="/videos/video1.mp4" type="video/mp4" />
+          Trình duyệt của bạn không hỗ trợ thẻ video.
+        </video>
+      </section>
+
       <section className="relative overflow-hidden bg-porsche-white">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,var(--porsche-grey-5),transparent_50%)]" />
         <div className="mx-auto grid max-w-6xl gap-12 px-4 py-16 md:grid-cols-2 md:items-center md:py-32 relative z-10">

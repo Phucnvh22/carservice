@@ -4,9 +4,9 @@
   "description": "Landing page đặt xe Huế (đưa đón sân bay Phú Bài, city tour, thuê xe tự lái) built with Next.js",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3001",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start -p 3001",
+    "start": "next start",
     "lint": "eslint ."
   },
   "keywords": [],
