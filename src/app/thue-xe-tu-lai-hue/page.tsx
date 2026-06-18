@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
 import { BookingForm } from "@/components/BookingForm"
+import { ScrollReveal } from "@/components/ScrollReveal"
 import { absUrl } from "@/lib/urls"
 
 type CarModel = {
@@ -148,93 +149,114 @@ export default function SelfDriveHuePage() {
     <div className="mx-auto max-w-6xl px-4 py-10">
       <div className="grid gap-10 md:grid-cols-2 md:items-start">
         <div className="space-y-5">
-          <div className="inline-flex items-center rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-700">
-            Self-drive • Huế
-          </div>
-          <h1 className="text-3xl font-bold leading-tight tracking-tight text-slate-900 md:text-4xl">
-            Thuê xe tự lái Huế
-          </h1>
-
-          <div className="relative aspect-[16/9] w-full overflow-hidden rounded-3xl border border-slate-200">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img 
-              src="/images/1.png" 
-              alt="Thuê xe tự lái Huế" 
-              className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
-            />
-          </div>
-
-          <p className="max-w-prose text-slate-600">
-            Dành cho bạn muốn chủ động lịch trình: đi Lăng Cô, Bạch Mã, Quảng Trị,
-            Đà Nẵng, Hội An... Nhận xe nhanh, xe sạch đẹp.
-          </p>
-
-          <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
-            <div className="text-sm font-semibold text-slate-900">
-              Điều kiện cơ bản
+          <ScrollReveal direction="up" delay={0}>
+            <div className="inline-flex items-center rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-700">
+              Self-drive • Huế
             </div>
-            <div className="mt-3 grid gap-2 text-sm text-slate-700">
-              <div>• CCCD/Passport + bằng lái hợp lệ</div>
-              <div>• Đặt cọc theo chính sách từng dòng xe</div>
-              <div>• Nhận/trả xe theo thoả thuận (có hỗ trợ giao xe)</div>
-            </div>
-            <div className="mt-3 text-xs text-slate-500">
-              Bạn nhắn lịch trình + số người để bên mình tư vấn dòng xe phù hợp.
-            </div>
-          </div>
+          </ScrollReveal>
 
-          <div className="grid gap-3 rounded-3xl border border-slate-200 bg-white p-5 text-sm text-slate-700">
-            <div className="font-semibold text-slate-900">Gợi ý chọn xe</div>
-            <ul className="list-disc space-y-2 pl-5">
-              <li>1–2 người: xe 4 chỗ gọn, tiết kiệm.</li>
-              <li>3–5 người: xe 5–7 chỗ thoải mái hơn.</li>
-              <li>Đi đường dài: ưu tiên xe mới, ít hao nhiên liệu.</li>
-            </ul>
-          </div>
+          <ScrollReveal direction="up" delay={100}>
+            <h1 className="text-3xl font-bold leading-tight tracking-tight text-slate-900 md:text-4xl">
+              Thuê xe tự lái Huế
+            </h1>
+          </ScrollReveal>
 
-          <div className="rounded-3xl border border-brand-100 bg-gradient-to-br from-white via-brand-50 to-accent-50 p-5 shadow-sm">
-            <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
-              <div>
-                <div className="text-2xl font-bold tracking-tight text-slate-900">
-                  Dòng xe tự lái phổ biến
-                </div>
-                <div className="mt-1 text-sm text-slate-600">
-                  Card gồm ảnh xe, tên xe và giá tham khảo theo ngày.
-                </div>
+          <ScrollReveal direction="up" delay={200}>
+            <div className="relative aspect-[16/9] w-full overflow-hidden rounded-3xl border border-slate-200">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img 
+                src="/images/1.png" 
+                alt="Thuê xe tự lái Huế" 
+                className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal direction="up" delay={250}>
+            <p className="max-w-prose text-slate-600">
+              Dành cho bạn muốn chủ động lịch trình: đi Lăng Cô, Bạch Mã, Quảng Trị,
+              Đà Nẵng, Hội An... Nhận xe nhanh, xe sạch đẹp.
+            </p>
+          </ScrollReveal>
+
+          <ScrollReveal direction="up" delay={300}>
+            <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
+              <div className="text-sm font-semibold text-slate-900">
+                Điều kiện cơ bản
               </div>
+              <div className="mt-3 grid gap-2 text-sm text-slate-700">
+                <div>• CCCD/Passport + bằng lái hợp lệ</div>
+                <div>• Đặt cọc theo chính sách từng dòng xe</div>
+                <div>• Nhận/trả xe theo thoả thuận (có hỗ trợ giao xe)</div>
+              </div>
+              <div className="mt-3 text-xs text-slate-500">
+                Bạn nhắn lịch trình + số người để bên mình tư vấn dòng xe phù hợp.
+              </div>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal direction="up" delay={350}>
+            <div className="grid gap-3 rounded-3xl border border-slate-200 bg-white p-5 text-sm text-slate-700">
+              <div className="font-semibold text-slate-900">Gợi ý chọn xe</div>
+              <ul className="list-disc space-y-2 pl-5">
+                <li>1–2 người: xe 4 chỗ gọn, tiết kiệm.</li>
+                <li>3–5 người: xe 5–7 chỗ thoải mái hơn.</li>
+                <li>Đi đường dài: ưu tiên xe mới, ít hao nhiên liệu.</li>
+              </ul>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal direction="up" delay={400}>
+            <div className="rounded-3xl border border-brand-100 bg-gradient-to-br from-white via-brand-50 to-accent-50 p-5 shadow-sm">
+              <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+                <div>
+                  <div className="text-2xl font-bold tracking-tight text-slate-900">
+                    Dòng xe tự lái phổ biến
+                  </div>
+                  <div className="mt-1 text-sm text-slate-600">
+                    Card gồm ảnh xe, tên xe và giá tham khảo theo ngày.
+                  </div>
+                </div>
+                <Link
+                  href="/lien-he"
+                  className="inline-flex h-11 items-center justify-center rounded-2xl bg-brand-600 px-4 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 active:translate-y-px"
+                >
+                  Nhận tư vấn chọn xe
+                </Link>
+              </div>
+              <div className="mt-5 grid gap-4 sm:grid-cols-2">
+                {cars.map((car, idx) => (
+                  <ScrollReveal key={car.name} direction="up" delay={idx * 150}>
+                    <CarCard car={car} />
+                  </ScrollReveal>
+                ))}
+              </div>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal direction="up" delay={550}>
+            <div className="flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/lien-he"
-                className="inline-flex h-11 items-center justify-center rounded-2xl bg-brand-600 px-4 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 active:translate-y-px"
+                className="inline-flex h-12 w-full items-center justify-center rounded-2xl bg-brand-600 px-5 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 active:translate-y-px sm:w-auto"
               >
-                Nhận tư vấn chọn xe
+                Nhận báo giá tự lái
+              </Link>
+              <Link
+                href="/"
+                className="inline-flex h-12 w-full items-center justify-center rounded-2xl border border-slate-200 bg-white px-5 text-sm font-semibold text-slate-900 hover:bg-slate-50 active:translate-y-px sm:w-auto"
+              >
+                Về trang chủ
               </Link>
             </div>
-            <div className="mt-5 grid gap-4 sm:grid-cols-2">
-              {cars.map((car) => (
-                <CarCard key={car.name} car={car} />
-              ))}
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-3 sm:flex-row">
-            <Link
-              href="/lien-he"
-              className="inline-flex h-12 w-full items-center justify-center rounded-2xl bg-brand-600 px-5 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 active:translate-y-px sm:w-auto"
-            >
-              Nhận báo giá tự lái
-            </Link>
-            <Link
-              href="/"
-              className="inline-flex h-12 w-full items-center justify-center rounded-2xl border border-slate-200 bg-white px-5 text-sm font-semibold text-slate-900 hover:bg-slate-50 active:translate-y-px sm:w-auto"
-            >
-              Về trang chủ
-            </Link>
-          </div>
+          </ScrollReveal>
         </div>
 
-        <div className="md:sticky md:top-24">
-          <BookingForm defaultService="Thuê xe tự lái" />
-        </div>
+        <ScrollReveal direction="left" delay={200}>
+          <div className="md:sticky md:top-24">
+            <BookingForm defaultService="Thuê xe tự lái" />
+          </div>
+        </ScrollReveal>
       </div>
     </div>
   )
