@@ -41,7 +41,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-sm font-bold uppercase tracking-wider text-slate-900">Điện thoại / Zalo</h3>
-                  <p className="mt-1 text-lg font-semibold text-slate-700">0788 661 197</p>
+                  <p className="mt-1 text-lg font-semibold text-slate-700">0123 456 789</p>
                   <p className="text-sm text-slate-500">Hỗ trợ 24/7</p>
                 </div>
               </div>

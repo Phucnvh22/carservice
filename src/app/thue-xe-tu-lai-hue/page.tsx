@@ -4,25 +4,11 @@ import Image from "next/image"
 import { BookingForm } from "@/components/BookingForm"
 import { ScrollReveal } from "@/components/ScrollReveal"
 import { absUrl } from "@/lib/urls"
+import { rentalFleetCatalog, type FleetCar, type FleetCarTone } from "@/lib/rental-admin"
 
-type CarModel = {
-  name: string
-  price: string
-  meta: string
-  tone: "brand" | "accent" | "slate"
-  imageSrc?: string
-}
+const cars: FleetCar[] = rentalFleetCatalog
 
-const cars: CarModel[] = [
-  { name: "Vinfast VF6", price: "Từ 900k/ngày", meta: "5 chỗ • Sạc điện miễn phí", tone: "accent", imageSrc: "/images/vinfast-vf6-trang.png" },
-  { name: "Vinfast VF5", price: "Từ 750k/ngày", meta: "5 chỗ • Sạc điện miễn phí", tone: "brand", imageSrc: "/images/gia-xe-vf5.jpg" },
-  { name: "Hyundai Elantra", price: "Từ 800k/ngày", meta: "5 chỗ • Cân bằng tiện nghi", tone: "brand", imageSrc: "/images/huyndai-elantra-2022_0002_elantra-2022.png" },
-  { name: "Vinfast VF9", price: "Từ 1tr8/ngày", meta: "7 chỗ • Gầm cao • Thoải mái", tone: "brand", imageSrc: "/images/Vf9.png" },
-  { name: "Kia Sorento", price: "Từ 1tr3/ngày", meta: "7 chỗ • Rộng rãi cho gia đình", tone: "slate", imageSrc: "/images/sorento.jpg" },
-  { name: "Kia Canival", price: "Từ 1tr8/ngày", meta: "7 chỗ • Đi đường dài ổn định", tone: "slate", imageSrc: "/images/carnival.png" }
-]
-
-const CarArt = ({ tone, title }: { tone: CarModel["tone"]; title: string }) => {
+const CarArt = ({ tone, title }: { tone: FleetCarTone; title: string }) => {
   const tint =
     tone === "brand"
       ? { a: "#6366f1", b: "#a5b4fc" }
@@ -78,7 +64,7 @@ const CarArt = ({ tone, title }: { tone: CarModel["tone"]; title: string }) => {
   )
 }
 
-const CarCard = ({ car }: { car: CarModel }) => {
+const CarCard = ({ car }: { car: FleetCar }) => {
   return (
     <div className="group rounded-3xl border border-slate-200 bg-white shadow-sm transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-0.5 hover:border-brand-200 hover:shadow-md">
       <div className="relative aspect-[16/9] overflow-hidden rounded-t-3xl">
@@ -105,7 +91,9 @@ const CarCard = ({ car }: { car: CarModel }) => {
             {car.price}
           </div>
         </div>
-        <div className="text-sm leading-relaxed text-slate-600">{car.meta}</div>
+        <div className="text-sm leading-relaxed text-slate-600">
+          {car.seats} • {car.meta}
+        </div>
         <div className="flex flex-wrap gap-2">
           <Link
             href="/lien-he"
